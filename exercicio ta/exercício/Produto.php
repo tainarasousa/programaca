@@ -7,16 +7,14 @@ class Produto
     private $id;
     private $nome;
     private $desc;
-    private $foto;
     private $preco;
     private $id_cat_prod;
 
-    public function __construct($id,$nome,$desc,$foto, $preco, $categoria){
+    public function __construct($id,$nome,$desc, $preco, $categoria){
         $this->id = $id;
         $this->nome = $nome;
         $this->preco = $preco;
         $this->id_cat_prod = $categoria;
-        $this->foto = $foto;
         $this->desc = $desc;
     }
 
@@ -34,11 +32,6 @@ class Produto
     public function getDesc()
     {
         return $this->desc;
-    }
-
-    public function getFoto()
-    {
-        return $this->foto;
     }
 
     public function getPreco()

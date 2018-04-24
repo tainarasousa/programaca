@@ -13,35 +13,6 @@
     <title>Document</title>
 </head>
 <body>
-<style type="text/css">
-    <!--
-
-    #navbar ul {
-        margin: 0;
-        padding: 5px;
-        list-style-type: none;
-        text-align: center;
-        background-color: #000;
-    }
-
-    #navbar ul li {
-        display: inline;
-    }
-
-    #navbar ul li a {
-        text-decoration: none;
-        padding: .2em 1em;
-        color: #fff;
-        background-color: #000;
-    }
-
-    #navbar ul li a:hover {
-        color: #000;
-        background-color: pink;
-    }
-
-    -->
-</style>
 
 <?php require_once 'nav.php'?>
 
@@ -50,8 +21,8 @@
         <th>Nome Produto</th>
         <th>Descricao Produto</th>
         <th>Preco Produto</th>
-
-
+        <th></th>
+        <th></th>
     </tr>
 
     <?php $ress= $prodCrud->getProdutos();
@@ -60,9 +31,13 @@
             <td><a href="controladorProduto.php?rota=unicornio&id=<?php echo $r->getId(); ?>" ><?php echo $r->getNome();?></a></td>
             <td><?php echo $r->getDesc();?></td>
             <td><?php echo $r->getPreco();?></td>
+            <td><a href="controladorProduto.php?rota=editar&id=<?php echo $r->getId();?>"><button>Editar</button></a></td>
+            <td><a href="controladorProduto.php?rota=excluir&id="><?php echo $r->getId(); ?><button>Excluir</button></a></td>
 
         </tr>
     <?php } endforeach; ?>
+
+    <tr><td><a href="controladorProduto.php?rota=cadastrar"><button>Cadastrar Produto</button></a> </td></tr>
 
 
 </table>

@@ -13,35 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-<style type="text/css">
-    <!--
 
-    #navbar ul {
-        margin: 0;
-        padding: 5px;
-        list-style-type: none;
-        text-align: center;
-        background-color: #000;
-    }
-
-    #navbar ul li {
-        display: inline;
-    }
-
-    #navbar ul li a {
-        text-decoration: none;
-        padding: .2em 1em;
-        color: #fff;
-        background-color: #000;
-    }
-
-    #navbar ul li a:hover {
-        color: #000;
-        background-color: pink;
-    }
-
-    -->
-</style>
 
 <?php require_once 'nav.php'?>
 
@@ -72,7 +44,7 @@
 <a href="index.php"><button>Voltar</button></a>
 
 
-<?php require_once 'footer.php'?>
+<?php require_once 'footer.php' ?>
 
 </body>
 </html>
